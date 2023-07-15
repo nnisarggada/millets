@@ -50,7 +50,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="sticky top-0 left-0 z-30 w-full h-20 p-4 bg-accent flex justify-between items-center text-white text-2xl font-black">
-        <a href="#">Prithvi Che Shetkari</a>
+        <a href="#">पृथ्वी चे शेतकरी</a>
         {!showMenu ? (
           <button
             className="text-4xl"

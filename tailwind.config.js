@@ -21,6 +21,9 @@ export default {
       backgroundImage: {
         hero: "url('../src/assets/images/millet.jpg')",
       },
+      fontFamily: {
+        hindi: "Tiro Devanagari Hindi",
+      },
     },
   },
   plugins: [],

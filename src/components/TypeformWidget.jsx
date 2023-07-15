@@ -25,7 +25,10 @@ const TypeformWidget = () => {
   }, []);
 
   return (
-    <section className="bg-cover w-full h-[100dvh] flex flex-col gap-6 bg-primary text-accent text-lg font-medium p-4">
+    <section
+      id="form"
+      className="absolute hidden left-0 top-20 z-20 bg-cover w-full h-screen flex-col gap-6 bg-primary text-accent text-lg font-medium p-4"
+    >
       <div ref={containerRef} style={{ width: "100%", height: "100%" }} />
     </section>
   );
