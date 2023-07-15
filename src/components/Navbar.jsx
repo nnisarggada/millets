@@ -20,8 +20,26 @@ export default function Navbar() {
         className="bg-primary w-full h-20"
       >
         <a
-          href={`#${text}`}
-          className="w-full h-full grid place-items-center text-accent text-3xl font-bold uppercase"
+          onClick={() => {
+            const targetElement = document.getElementById(text);
+
+            if (targetElement) {
+              // Calculate the target scroll position
+              const targetScrollPosition =
+                targetElement.offsetTop -
+                5 *
+                  parseFloat(
+                    getComputedStyle(document.documentElement).fontSize,
+                  );
+
+              // Scroll to the target position
+              window.scrollTo({
+                top: targetScrollPosition,
+                behavior: "smooth",
+              });
+            }
+          }}
+          className="w-full h-full grid place-items-center text-accent text-3xl font-bold uppercase cursor-pointer"
         >
           {text}
         </a>
@@ -31,7 +49,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-30 w-full h-20 p-4 bg-accent flex justify-between items-center text-white text-2xl font-black">
+      <nav className="sticky top-0 left-0 z-30 w-full h-20 p-4 bg-accent flex justify-between items-center text-white text-2xl font-black">
         <a href="#">Prithvi Che Shetkari</a>
         {!showMenu ? (
           <button
@@ -54,13 +72,14 @@ export default function Navbar() {
         )}
       </nav>
       <div
-        className={`fixed top-20 ${menuPos} w-full h-screen bg-secondary p-4 pt-10 transition-all`}
+        className={`fixed z-30 top-20 ${menuPos} w-full h-screen bg-secondary p-4 pt-10 transition-all`}
       >
         <ul className="flex flex-col gap-10 px-10">
           <NavLink text="home" />
-          <NavLink text="home" />
-          <NavLink text="home" />
-          <NavLink text="home" />
+          <NavLink text="cast" />
+          <NavLink text="bts" />
+          <NavLink text="iyom" />
+          <NavLink text="about us" />
         </ul>
       </div>
     </>

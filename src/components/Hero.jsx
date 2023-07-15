@@ -5,7 +5,7 @@ export default function Hero() {
     <>
       <section
         id="home"
-        className="bg-cover w-full h-screen flex flex-col gap-6 bg-primary text-accent text-lg font-medium p-4 pt-24"
+        className="bg-cover w-full h-screen flex flex-col gap-6 bg-primary text-accent text-lg font-medium p-4"
       >
         <h1 className="text-2xl font-black italic">
           Prithvi Che Shetkari

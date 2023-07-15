@@ -13,6 +13,11 @@ export default {
         secondary: "#634133",
         accent: "#432818",
       },
+      borderColor: {
+        primary: "#ffc599",
+        secondary: "#634133",
+        accent: "#432818",
+      },
       backgroundImage: {
         hero: "url('../src/assets/images/millet.jpg')",
       },
