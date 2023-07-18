@@ -72,14 +72,28 @@ export default function Navbar() {
         )}
       </nav>
       <div
-        className={`fixed z-30 top-20 ${menuPos} w-full h-screen bg-secondary p-4 pt-10 transition-all`}
+        className={`fixed z-30 top-20 ${menuPos} w-full h-screen bg-secondary p-4 py-10 transition-all`}
       >
-        <ul className="flex flex-col gap-10 px-10">
+        <ul className="h-full flex flex-col gap-10 px-10">
           <NavLink text="home" />
-          <NavLink text="cast" />
           <NavLink text="bts" />
           <NavLink text="iyom" />
           <NavLink text="about us" />
+          <li className="flex-grow"></li>
+          <li
+            onClick={() => {
+              setShowMenu(false);
+            }}
+            className="bg-primary w-full h-20"
+          >
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdJxL-MsFOMkh85YbZJ08Ld7aQ2gd7Yv501FjH57oXRePGSsw/viewform"
+              target="_blank"
+              className="w-full h-full grid place-items-center text-accent text-3xl font-bold uppercase cursor-pointer"
+            >
+              Join Us
+            </a>
+          </li>
         </ul>
       </div>
     </>
