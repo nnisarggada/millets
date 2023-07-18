@@ -6,9 +6,9 @@ export default function Navbar() {
 
   let menuPos;
   if (showMenu) {
-    menuPos = "left-0";
+    menuPos = "right-0";
   } else {
-    menuPos = "left-full";
+    menuPos = "-right-full";
   }
 
   const NavLink = ({ text }) => {
@@ -17,7 +17,7 @@ export default function Navbar() {
         onClick={() => {
           setShowMenu(false);
         }}
-        className="bg-primary w-full h-20"
+        className="bg-primary w-full h-20 md:w-80"
       >
         <a
           onClick={() => {
@@ -39,7 +39,7 @@ export default function Navbar() {
               });
             }
           }}
-          className="w-full h-full grid place-items-center text-accent text-3xl font-bold uppercase cursor-pointer"
+          className="w-full h-full grid place-items-center text-accent text-3xl font-bold uppercase cursor-pointer md:text-4xl"
         >
           {text}
         </a>
@@ -49,11 +49,11 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 left-0 z-30 w-full h-20 p-4 bg-accent flex justify-between items-center text-white text-2xl font-black">
+      <nav className="sticky top-0 left-0 z-30 w-full h-20 p-4 bg-accent flex justify-between items-center text-white text-2xl font-black md:text-3xl xl:text-5xl xl:h-24 xl:px-12">
         <a href="#">पृथ्वी चे शेतकरी</a>
         {!showMenu ? (
           <button
-            className="text-4xl"
+            className="text-4xl md:text-5xl xl:text-6xl"
             onClick={() => {
               setShowMenu(true);
             }}
@@ -62,7 +62,7 @@ export default function Navbar() {
           </button>
         ) : (
           <button
-            className="text-4xl"
+            className="text-4xl md:text-5xl xl:text-6xl"
             onClick={() => {
               setShowMenu(false);
             }}
@@ -72,9 +72,9 @@ export default function Navbar() {
         )}
       </nav>
       <div
-        className={`fixed z-30 top-20 ${menuPos} w-full h-screen bg-secondary p-4 py-10 transition-all`}
+        className={`fixed z-30 top-20 ${menuPos} w-full h-[calc(100dvh-5rem)] bg-secondary p-4 py-10 transition-all md:w-fit xl:top-24 xl:h-[calc(100dvh-6rem)]`}
       >
-        <ul className="h-full flex flex-col gap-10 px-10">
+        <ul className="h-full flex flex-col gap-10 px-10 items-center">
           <NavLink text="home" />
           <NavLink text="bts" />
           <NavLink text="iyom" />
@@ -84,12 +84,12 @@ export default function Navbar() {
             onClick={() => {
               setShowMenu(false);
             }}
-            className="bg-primary w-full h-20"
+            className="bg-primary w-full h-20 md:w-80"
           >
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdJxL-MsFOMkh85YbZJ08Ld7aQ2gd7Yv501FjH57oXRePGSsw/viewform"
               target="_blank"
-              className="w-full h-full grid place-items-center text-accent text-3xl font-bold uppercase cursor-pointer"
+              className="w-full h-full grid place-items-center text-accent text-3xl font-bold uppercase cursor-pointer md:text-4xl"
             >
               Join Us
             </a>

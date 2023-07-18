@@ -32,7 +32,7 @@ export default function Bts() {
     }
 
     return (
-      <div className="w-full h-64 bg-black border-4 border-accent">
+      <div className="w-full h-64 bg-black border-4 border-accent md:w-96 md:h-72 xl:w-[800px] xl:h-[500px]">
         <img
           className="object-cover w-full h-full"
           src={images[currentImageIndex].default}
@@ -46,14 +46,16 @@ export default function Bts() {
     <>
       <section
         id="bts"
-        className="bg-cover w-full flex flex-col gap-6 bg-primary text-accent text-lg font-medium p-4"
+        className="bg-cover w-full flex flex-col gap-6 bg-primary text-accent text-lg font-medium p-4 md:text-xl xl:text-3xl xl:h-[calc(100vh-6rem)]"
       >
-        <h1 className="text-2xl font-black italic">
-          Behind
-          <br />
-          the scenes
-        </h1>
-        <ImageSlider />
+        <div className="h-full w-full flex flex-col gap-6 md:items-center xl:justify-evenly">
+          <h1 className="text-2xl font-black italic md:text-center md:text-3xl xl:text-5xl xl:justify-self-start">
+            Behind
+            <br />
+            the scenes
+          </h1>
+          <ImageSlider />
+        </div>
       </section>
     </>
   );
